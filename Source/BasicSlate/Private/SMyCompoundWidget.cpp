@@ -17,7 +17,7 @@ FReply SMyCompoundWidget::HandBtnClick()
 }
 void SMyCompoundWidget::Construct(const FArguments& InArgs)
 {
-	MyText = InArgs._InitText;
+	MyText = InArgs._InitText; //¶ÁÈ¡²ÎÊý
 	ChildSlot
 	[
 		SNew(SVerticalBox) 

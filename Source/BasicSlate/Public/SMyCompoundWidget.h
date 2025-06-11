@@ -15,11 +15,12 @@ class BASICSLATE_API SMyCompoundWidget : public SCompoundWidget
 {
 
 private:
-	TSharedPtr<STextBlock> MyTextWidget;
+	TSharedPtr<STextBlock> MyTextWidget; // 引用，方便动态修改属性，SButton不需要动态修改
 	FText MyText;
 	FReply HandBtnClick();
 
 public:
+	// 注意InitText声明方式
 	SLATE_BEGIN_ARGS(SMyCompoundWidget) : _InitText(FText::FromString("Click Btn"))
 	{}
 	SLATE_ARGUMENT(FText, InitText)
