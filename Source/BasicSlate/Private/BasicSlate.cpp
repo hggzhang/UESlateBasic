@@ -8,7 +8,7 @@
 #include "Widgets/Layout/SBox.h"
 #include "Widgets/Text/STextBlock.h"
 #include "ToolMenus.h"
-
+#include "SMyCompoundWidget.h"
 static const FName BasicSlateTabName("BasicSlate");
 
 #define LOCTEXT_NAMESPACE "FBasicSlateModule"
@@ -68,8 +68,8 @@ TSharedRef<SDockTab> FBasicSlateModule::OnSpawnPluginTab(const FSpawnTabArgs& Sp
 			.HAlign(HAlign_Center)
 			.VAlign(VAlign_Center)
 			[
-				SNew(STextBlock)
-				.Text(WidgetText)
+				SNew(SMyCompoundWidget)
+				.InitText(FText::FromString(TEXT("Init Text")))
 			]
 		];
 }

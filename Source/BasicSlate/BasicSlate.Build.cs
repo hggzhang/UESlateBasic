@@ -43,6 +43,7 @@ public class BasicSlate : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+				"BasicSlate",
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
