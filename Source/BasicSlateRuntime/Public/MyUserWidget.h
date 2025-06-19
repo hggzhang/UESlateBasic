@@ -23,6 +23,7 @@ class BASICSLATERUNTIME_API UMyUserWidget : public UUserWidget
 	GENERATED_BODY()
 
 public:
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MySetting")
 	FText DisplayText;
 

@@ -30,6 +30,6 @@ void UMyUserWidget::ReleaseSlateResources(bool bReleaseChildren)
 {
     Super::ReleaseSlateResources(bReleaseChildren);
 
-    // 显式释放Slate资源
+    // 显式释放Slate资源，否则可能报错
     MySlate.Reset();
 }
