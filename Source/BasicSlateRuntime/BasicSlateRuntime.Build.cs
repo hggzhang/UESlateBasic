@@ -44,6 +44,7 @@ public class BasicSlateRuntime : ModuleRules
 				"Slate",
 				"SlateCore",
 				"BasicSlate",
+				"UMG",
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

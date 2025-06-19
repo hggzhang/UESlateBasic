@@ -8,10 +8,12 @@
 class STextBlock;
 class SButton;
 
+DECLARE_DELEGATE(FOnBtnClicked)
+ // 添加按钮点击委托
 /**
  * 
  */
-class BASICSLATE_API SMyCompoundWidget : public SCompoundWidget
+class BASICSLATE_API SMyCompoundWidget2 : public SCompoundWidget
 {
 
 private:
@@ -21,12 +23,18 @@ private:
 
 public:
 	// 注意InitText声明方式
-	SLATE_BEGIN_ARGS(SMyCompoundWidget) : _InitText(FText::FromString("Click Btn"))
+	SLATE_BEGIN_ARGS(SMyCompoundWidget2) : _InitText(FText::FromString("Default"))
 	{}
 	SLATE_ARGUMENT(FText, InitText)
-
+	SLATE_EVENT(FOnBtnClicked, OnButtonClicked) // 添加委托绑定
 	SLATE_END_ARGS()
 
 	/** Constructs this widget with InArgs */
 	void Construct(const FArguments& InArgs);
+
+	// 公开设置文本的方法
+	void SetText(const FText& InText);
+
+	// 添加按钮点击委托
+	FOnBtnClicked OnButtonClicked;
 };
